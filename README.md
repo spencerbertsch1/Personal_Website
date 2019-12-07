@@ -1,2 +1,2 @@
-# Personal_Website
+# Personal Website
 spencerbertsch.com
