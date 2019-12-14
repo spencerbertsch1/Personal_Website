@@ -28,17 +28,17 @@ def showHomepage():
 # Web Page #2 - About - show all CV informaiton including education and work
 @app.route('/about')
 def showAbout():
-    return '...About page here...' #render_template('about.html')
+    return render_template('about.html')
 
 # Web Page #3 - ML Resources - show helpful links to ML resources
 @app.route('/ml')
 def showML():
-    return '...ML page here...' #render_template('ml.html')
+    return render_template('ml.html')
 
 # Web Page #3 - Contact - show helpful links to ML resources
 @app.route('/contact')
 def showContact():
-    return '...Contact page here...' #render_template('contact.html')
+    return render_template('contact.html')
 
 if __name__ == '__main__':
     app.secret_key = 'super_secret_key'
