@@ -23,7 +23,7 @@ app = Flask(__name__)
 @app.route('/')
 @app.route('/home')
 def showHomepage():
-    return '...Homepage will go here...' # render_template('homepage.html')
+    return render_template('homepage.html')
 
 # Web Page #2 - About - show all CV informaiton including education and work
 @app.route('/about')
@@ -41,7 +41,9 @@ def showContact():
     return '...Contact page here...' #render_template('contact.html')
 
 if __name__ == '__main__':
-    app.run()
+    app.secret_key = 'super_secret_key'
+    app.debug = True
+    app.run(host='0.0.0.0', port=5000)
 
 
 
