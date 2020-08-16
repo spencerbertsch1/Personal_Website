@@ -2,15 +2,20 @@
 body {
     text-align: center;
     font-family: Arial;
-    /*background-color: #6495ED;*/
-    background-image: linear-gradient(to top, #EAFAF1 0%, #2ECC71 100%);
+    background-color: #ffffff;
+    /*background-image: linear-gradient(to top, #EAFAF1 0%, #6495ED 100%);*/
 }
 
 #main-header{
-  background-color:coral;
-  color:FFFFFF;
+  background-color:blue;
+  color:blue;
 }
 
+
+
+
+
+/*
 .container {
   width:30%;
   margin:auto;
@@ -24,26 +29,7 @@ body {
     margin: 20px;
 }
 
-/* Using the URLs of the images here - also have the .jpeg files in the static directory so those could be used too*/
-.p-box1{
-  width:400px;
-  height:500px;
-  margin:20px;
 
-  background-image: url('https://images.unsplash.com/photo-1565992441121-4367c2967103?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=882&q=80');
-  background-repeat: no-repeat;
-  background-size: contain;
-}
-
-.p-box2{
-  width:400px;
-  height:500px;
-  margin:20px;
-
-  background-image: url('https://images.unsplash.com/photo-1557244301-70d47d388ec2?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=975&q=80');
-  background-repeat: no-repeat;
-  background-size: contain;
-}
 
 .Box1 {
   width:25%;
@@ -89,8 +75,8 @@ body {
 	padding:20px;
 	margin:20px auto;
   width:15%;
-  /*padding: 10px;
-  margin: 15px auto;*/
+  padding: 10px;
+  margin: 15px auto;
 }
 
 h1,
@@ -118,13 +104,20 @@ h2 {
     font-size: 1.2em;
 }
 
+ul{
+	padding:0;
+	padding-left:20px;
+	list-style:square;
+  list-style:none;
+}
+
 p,
 dd,
 dt {
     color: #cccccc;
 }
 
-/* LINKS */
+
 a {
     text-decoration: none;
     color: #FFFFE0;
@@ -202,7 +195,7 @@ a {
     background-color: #E5E5E5
 }
 
-/*
+
 .categories{
 	border:1px #ccc solid;
 	padding:10px;

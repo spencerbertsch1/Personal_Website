@@ -3,6 +3,7 @@
 This file contains a flask script which represents the website
 spencerbertsch.com
 """
+
 # Imports
 from flask import (Flask, render_template, request, redirect, jsonify,
                    url_for, flash)
@@ -31,11 +32,16 @@ def showAbout():
     return render_template('about.html')
 
 # Web Page #3 - ML Resources - show helpful links to ML resources
-@app.route('/ml')
-def showML():
-    return render_template('ml.html')
+@app.route('/projects')
+def showProjects():
+    return render_template('projects.html')
 
-# Web Page #3 - Contact - show helpful links to ML resources
+# Web Page #3 - Library - contains links to reference papers, articles, or slide decks which I have written 
+@app.route('/resources')
+def showResources():
+    return render_template('resources.html')
+
+# Web Page #4 - Contact - show helpful links to ML resources
 @app.route('/contact')
 def showContact():
     return render_template('contact.html')
@@ -44,13 +50,3 @@ if __name__ == '__main__':
     app.secret_key = 'super_secret_key'
     app.debug = True
     app.run(host='0.0.0.0', port=5000)
-
-
-
-
-
-
-
-
-
-# end
