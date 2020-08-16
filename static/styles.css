@@ -1,9 +1,8 @@
-
+/*
 body {
     text-align: center;
     font-family: Arial;
     background-color: #ffffff;
-    /*background-image: linear-gradient(to top, #EAFAF1 0%, #6495ED 100%);*/
 }
 
 #main-header{
@@ -15,7 +14,7 @@ body {
 
 
 
-/*
+
 .container {
   width:30%;
   margin:auto;
