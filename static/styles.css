@@ -52,10 +52,13 @@ nav a {
   text-decoration: none;
   text-transform: uppercase;
   font-size: 17px;
+  transition: all 500ms;
 }
 
 nav a:hover {
   color: rgb(255, 255, 255);
+  font-size:18px;
+  font-size-adjust: 18px;
 }
 
 nav a::before {
