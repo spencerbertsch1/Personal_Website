@@ -57,8 +57,8 @@ nav a {
 
 nav a:hover {
   color: rgb(255, 255, 255);
-  font-size:18px;
-  font-size-adjust: 18px;
+  font-size:17px;
+  font-size-adjust: 17px;
 }
 
 nav a::before {
@@ -78,3 +78,20 @@ nav a:hover::before {
   width: 100%;
 }
 
+
+.opener {
+  float: left;
+  border: 1px solid #d7d7d7 ;
+  box-shadow: 1px 1px 5px #d7d7d7;
+
+  border-radius: 7px;
+  background: #ffffff;
+
+  margin-left: 50px;
+  margin-top: 20px;
+  padding: 20px;
+  width: 450px;
+  height: 530px;
+  
+  word-wrap: break-word;
+}
