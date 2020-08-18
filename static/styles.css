@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css?family=Work+Sans:400,600');
 body {
 	margin: 0;
-	background: #f9f9f9;
+	background: #fcfcfc;
 	font-family: 'Work Sans', sans-serif;
 	font-weight: 1100;
 }
@@ -84,16 +84,16 @@ nav a:hover::before {
 .image-box {
   float: left;
   border: 1px solid #d7d7d7 ;
-  box-shadow: 1px 1px 5px #d7d7d7;
+  box-shadow: 1px 1px 3px #d7d7d7;
 
   border-radius: 7px;
   background: #ffffff;
 
-  margin-left: 200px;
+  margin-left: 340px;
   margin-top: 40px;
   padding: 20px;
-  width: 380px;
-  height: 480px;
+  width: 320px;
+  height: 435px;
 
   word-wrap: break-word;
 }
@@ -101,7 +101,7 @@ nav a:hover::before {
 .text-box {
   float: left;
   border: 1px solid #d7d7d7 ;
-  box-shadow: 1px 1px 5px #d7d7d7;
+  box-shadow: 1px 1px 3px #d7d7d7;
 
   border-radius: 7px;
   background: #ffffff;
@@ -109,12 +109,11 @@ nav a:hover::before {
   margin-left: 25px;
   margin-top: 40px;
   padding: 20px;
-  width: 500px;
+  width: 480px;
   height: 600px;
 
   word-wrap: break-word;
 }
-
 
 footer {
   float: middle;
@@ -125,4 +124,31 @@ footer {
   width: 100%;
   height:100px;
   z-index:40;
+}
+
+p {
+  font-size: 17px;
+}
+
+p em {
+  color: #f29e02;
+}
+
+hr { 
+  margin-top: 2px;
+  margin-bottom: 0px;
+  margin-left: 230px;
+  margin-right: 230px;
+  border-width: 1px;
+  color: grey;
+} 
+
+
+.img-container {
+  text-align: center;
+}
+
+.aws-img{
+  text-align: center;
+  display: block;
 }
