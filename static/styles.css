@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css?family=Work+Sans:400,600');
 body {
 	margin: 0;
-	background: #ffffff;
+	background: #f9f9f9;
 	font-family: 'Work Sans', sans-serif;
 	font-weight: 1100;
 }
@@ -13,8 +13,8 @@ body {
 }
 
 header {
-  background: #1976D2;  
-  box-shadow: 0px 1px 11px rgb(199, 199, 199);
+  background: #304FFE;  
+  box-shadow: 0px 2px 11px rgb(199, 199, 199);
   border-radius: 1px;
 }
 
@@ -53,6 +53,8 @@ nav a {
   text-transform: uppercase;
   font-size: 17px;
   transition: all 500ms;
+  padding-top: 20px;
+  padding-bottom: 20px;
 }
 
 nav a:hover {
@@ -79,7 +81,7 @@ nav a:hover::before {
 }
 
 
-.opener {
+.image-box {
   float: left;
   border: 1px solid #d7d7d7 ;
   box-shadow: 1px 1px 5px #d7d7d7;
@@ -87,11 +89,40 @@ nav a:hover::before {
   border-radius: 7px;
   background: #ffffff;
 
-  margin-left: 50px;
-  margin-top: 20px;
+  margin-left: 200px;
+  margin-top: 40px;
   padding: 20px;
-  width: 450px;
-  height: 530px;
-  
+  width: 380px;
+  height: 480px;
+
   word-wrap: break-word;
+}
+
+.text-box {
+  float: left;
+  border: 1px solid #d7d7d7 ;
+  box-shadow: 1px 1px 5px #d7d7d7;
+
+  border-radius: 7px;
+  background: #ffffff;
+
+  margin-left: 25px;
+  margin-top: 40px;
+  padding: 20px;
+  width: 500px;
+  height: 600px;
+
+  word-wrap: break-word;
+}
+
+
+footer {
+  float: middle;
+  position: fixed;
+  bottom:20;
+  left: 0;
+  right: 0;
+  width: 100%;
+  height:100px;
+  z-index:40;
 }
