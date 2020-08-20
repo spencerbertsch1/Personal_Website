@@ -1,14 +1,48 @@
 <html>
-<head>
-	<link rel=stylesheet type=text/css href="{{ url_for('static', filename='styles.css') }}">
-	</head>
+  <head>
+    <meta charset="utf-8">
+
+    <title>{% block page_title %}Home{% endblock page_title %}</title>
+
+    <link rel=stylesheet type=text/css href="{{ url_for('static', filename='styles.css') }}">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+</head>
+
+<header>
+  <div class="container">
+    <h1 class="logo"></h1>
+
+    <nav>
+      <ul>
+        <li><a href="{{ url_for('showHomepage')}}">Home</a></li>
+        <li><a href="{{ url_for('showProjects')}}">PROJECTS</a></li>
+        <li><a href="{{ url_for('showResources')}}">RESOURCES</a></li>
+        <li><a href="{{ url_for('showContact')}}">CONTACT</a></li>
+        <li><a href="https://github.com/spencerbertsch1">GITHUB</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
 
   <body>
-    <h1>Contact</h1>
-
-    <div>
-    <a class="buttons" href="{{ url_for('showHomepage') }}">Return to Homepage</a>
+    <div class="contact-text-box">
+      <h1> 
+        Get in touch! 
+      </h1>
+      
+      <p>
+        Feel free to connect on LinkedIn! 
+      </p>
+      <div class="contact-icons">
+        <a href="https://www.linkedin.com/in/spencerbertsch/"><i class="fa fa-linkedin" style="font-size:44px;color:#2962FF"></i></a>
+        &emsp; <a href="https://github.com/spencerbertsch1"><i class="fa fa-github" style="font-size:44px;color:#2962FF"></i></a>
+      </div>
     </div>
+
   </body>
 
 </html>

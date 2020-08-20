@@ -13,7 +13,7 @@ body {
 }
 
 header {
-  background: #03A9F4;  
+  background: #2979FF;  
   box-shadow: 0px 2px 11px rgb(199, 199, 199);
   border-radius: 1px;
 }
@@ -115,6 +115,23 @@ nav a:hover::before {
   word-wrap: break-word;
 }
 
+.contact-text-box{
+  float: left;
+  border: 1px solid #d7d7d7 ;
+  box-shadow: 1px 1px 3px #d7d7d7;
+
+  border-radius: 7px;
+  background: #ffffff;
+
+  margin-left: 650px;
+  margin-top: 90px;
+  padding: 20px;
+  width: 440px;
+  height: 240px;
+
+  word-wrap: break-word;
+}
+
 footer {
   float: middle;
   position: fixed;
@@ -131,7 +148,7 @@ p {
 }
 
 p em {
-  color: #f29e02;
+  color: #f59f00;
 }
 
 .light-text{
@@ -163,4 +180,12 @@ hr {
   
 .fa:hover { 
 transform: scale(1.2); 
+}
+
+.contact-icons{
+  margin: 0;
+  position: absolute;
+  top: 40%;
+  left: 50%;
+  margin-right: -50%;
 }
