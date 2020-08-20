@@ -31,17 +31,17 @@ def showHomepage():
 def showAbout():
     return render_template('about.html')
 
-# Web Page #3 - ML Resources - show helpful links to ML resources
+# Web Page #3 - Projects - show helpful links to ML resources
 @app.route('/projects')
 def showProjects():
     return render_template('projects.html')
 
-# Web Page #3 - Library - contains links to reference papers, articles, or slide decks which I have written 
+# Web Page #3 - References - contains links to reference papers, articles, or slide decks which I have written 
 @app.route('/resources')
 def showResources():
     return render_template('resources.html')
 
-# Web Page #4 - Contact - show helpful links to ML resources
+# Web Page #4 - Contact - show ways to get in touch
 @app.route('/contact')
 def showContact():
     return render_template('contact.html')
