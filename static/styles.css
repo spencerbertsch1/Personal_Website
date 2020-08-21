@@ -14,7 +14,7 @@ body {
 
 header {
   background: #2979FF;  
-  box-shadow: 0px 2px 11px rgb(199, 199, 199);
+  box-shadow: 0px 3px 11px rgb(189, 189, 189);
   border-radius: 1px;
 }
 
@@ -116,15 +116,17 @@ nav a:hover::before {
 }
 
 .contact-text-box{
-  float: left;
   border: 1px solid #d7d7d7 ;
   box-shadow: 1px 1px 3px #d7d7d7;
-
   border-radius: 7px;
   background: #ffffff;
 
-  margin-left: 650px;
-  margin-top: 90px;
+  /* Center vertically and horizontally */
+  position: absolute;
+  top: 30%;
+  left: 50%;
+  margin: -120px 0 0 -220px; /* apply negative top and left margins to truly center the element */
+
   padding: 20px;
   width: 440px;
   height: 240px;
@@ -185,7 +187,6 @@ transform: scale(1.2);
 .contact-icons{
   margin: 0;
   position: absolute;
-  top: 40%;
-  left: 50%;
-  margin-right: -50%;
+  top: 60%;
+  left: 30%;
 }
