@@ -1,14 +1,67 @@
 <html>
-<head>
-	<link rel=stylesheet type=text/css href="{{ url_for('static', filename='styles.css') }}">
-	</head>
+  <head>
+    <meta charset="utf-8">
+
+    <title>{% block page_title %}Home{% endblock page_title %}</title>
+
+    <link rel=stylesheet type=text/css href="{{ url_for('static', filename='styles.css') }}">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+</head>
+
+<header>
+  <div class="container">
+    <h1 class="logo"></h1>
+
+    <nav>
+      <ul>
+        <li><a href="{{ url_for('showHomepage')}}">Home</a></li>
+        <li><a href="{{ url_for('showProjects')}}">PROJECTS</a></li>
+        <li><a href="{{ url_for('showResources')}}">RESOURCES</a></li>
+        <li><a href="{{ url_for('showContact')}}">CONTACT</a></li>
+        <li><a href="https://github.com/spencerbertsch1">GITHUB</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
 
   <body>
-    <h1>Resources</h1>
-
-    <div>
-    <a class="buttons" href="{{ url_for('showHomepage') }}">Return to Homepage</a>
+    <div class="resource-title">
+      <h1> 
+        Reference Papers  
+      </h1>
     </div>
+
+
+
+
+    <div class="resource-title">
+        <h1> 
+          Sample Presentations
+        </h1>
+      </div>
+
+
+
+      
+
+    <div style="text-align:center;">
+    <footer>
+        <br>
+        <hr>
+        <br>
+        <a href="https://www.linkedin.com/in/spencerbertsch/"><i class="fa fa-linkedin" style="font-size:24px;color:#2962FF"></i></a>
+        &emsp; <a href="https://github.com/spencerbertsch1"><i class="fa fa-github" style="font-size:24px;color:#2962FF"></i></a>
+        &emsp; <a href="https://twitter.com/spencerbertsch"><i class="fa fa-twitter" style="font-size:24px;color:#2962FF"></i></a>
+        
+        <p class="light-text" style="color:gray"> Spencer Bertsch &copy; 2020 </p>
+    </footer>
+    </div>
+
+
   </body>
 
 </html>

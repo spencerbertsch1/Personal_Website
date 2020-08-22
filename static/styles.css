@@ -91,7 +91,7 @@ nav a:hover::before {
 
   margin-left: 340px;
   margin-top: 40px;
-  padding: 20px;
+  padding: 14px;
   width: 320px;
   height: 435px;
 
@@ -108,7 +108,7 @@ nav a:hover::before {
 
   margin-left: 25px;
   margin-top: 40px;
-  padding: 20px;
+  padding: 16px;
   width: 480px;
   height: 600px;
 
@@ -189,4 +189,12 @@ transform: scale(1.2);
   position: absolute;
   top: 60%;
   left: 30%;
+}
+
+.resource-title{
+  margin-top: 60px;
+  margin-bottom: 0px;
+  margin-left: 150px;
+
+  font-size: 18px;
 }
