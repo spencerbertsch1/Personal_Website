@@ -14,7 +14,7 @@ body {
 
 header {
   background: #2979FF;  
-  box-shadow: 0px 3px 11px rgb(189, 189, 189);
+  box-shadow: 0px 3px 11px rgb(184, 184, 184);
   border-radius: 1px;
 }
 
@@ -195,6 +195,42 @@ transform: scale(1.2);
   margin-top: 60px;
   margin-bottom: 0px;
   margin-left: 150px;
+  margin-right: 300px;
 
   font-size: 18px;
+}
+
+.grid-container {
+  display: grid;
+  grid-template-columns: auto auto auto;
+  
+  padding: 10px;
+  grid-column-gap: 30px;
+  grid-row-gap: 14px;
+
+  margin-top: 10px;
+  margin-bottom: 0px;
+  margin-left: 140px;
+  margin-right: 150px;
+
+}
+
+.grid-item {
+  background: #ffffff;
+  border: 1px solid #d7d7d7 ;
+  box-shadow: 1px 1px 3px #d7d7d7;
+  border-radius: 7px;
+  
+  padding: 18px;
+  font-size: 18px;
+  text-align: center;
+
+  /* increase size and shadow on hover */
+  transition: transform .3s; /* Animation */
+
+}
+
+.grid-item:hover {
+  transform: scale(1.02); /* (120% zoom) */
+  box-shadow: 0 0 12px rgba(33,33,33,.2); 
 }
