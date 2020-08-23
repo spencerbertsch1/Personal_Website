@@ -227,7 +227,9 @@ transform: scale(1.2);
 
 .projects-grid-container{
   display: grid;
+  justify-content: space-evenly;
   grid-template-columns: auto auto auto;
+  grid-template-rows: 80px 300px;
   
   padding: 10px;
   grid-column-gap: 44px;
