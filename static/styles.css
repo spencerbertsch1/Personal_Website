@@ -222,7 +222,6 @@ transform: scale(1.2);
   margin-bottom: 20px;
   margin-left: 140px;
   margin-right: 150px;
-
 }
 
 .projects-grid-container{
@@ -233,13 +232,12 @@ transform: scale(1.2);
   
   padding: 10px;
   grid-column-gap: 25px;
-  grid-row-gap: 30px;
+  grid-row-gap: 40px;
 
   margin-top: 10px;
   margin-bottom: 20px;
   margin-left: 140px;
   margin-right: 200px;
-
 }
 
 .grid-item {
@@ -254,7 +252,6 @@ transform: scale(1.2);
 
   /* increase size and shadow on hover */
   transition: transform .3s; /* Animation */
-
 }
 
 .grid-item:hover {
