@@ -242,6 +242,22 @@ transform: scale(1.2);
   margin-right: 200px;
 }
 
+.contact-grid-container{
+  display: grid;
+  justify-content: space-evenly;
+  grid-template-columns: 240px 240px;
+  grid-template-rows: auto auto;
+  
+  padding: 10px;
+  grid-column-gap: 25px;
+  grid-row-gap: 40px;
+
+  margin-top: 10px;
+  margin-bottom: 20px;
+  margin-left: 10px;
+  margin-right: 10px;
+}
+
 .grid-item {
   background: #ffffff;
   border: 1px solid #d7d7d7 ;
