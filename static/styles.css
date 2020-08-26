@@ -30,6 +30,7 @@ header::after {
   width:100%;
   height:100px;   /* Height of the footer */
   text-align:center;
+  margin: 7px;
 }
 
 .footer-home {
@@ -44,6 +45,7 @@ header::after {
   height:100px;
   z-index:40;
   text-align:center;
+  margin: 7px;
 }
 
 
