@@ -46,6 +46,16 @@ def showResources():
 def showContact():
     return render_template('contact.html')
 
+# Web Page #5 - Projects: sentiment-dashboard
+@app.route('/sentiment-dashboard')
+def showSentimentDash():
+    return render_template('sentiment_dash.html')
+
+# Web Page #6 - Projects: stay_six_ft_apart
+@app.route('/stay_six_ft_apart')
+def showStaySixFtApart():
+    return render_template('stay_six_ft_apart.html')
+
 if __name__ == '__main__':
     app.secret_key = 'super_secret_key'
     app.debug = True
