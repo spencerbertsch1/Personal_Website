@@ -153,7 +153,7 @@ nav a:hover::before {
 
   padding: 20px;
   width: 460px;
-  height: 280px;
+  height: 300px;
 
   word-wrap: break-word;
 }
@@ -201,18 +201,11 @@ transform: scale(1.2);
 }
 
 .fa th{ 
-  transition: all .2s ease-in-out; 
+  transition: all .3s ease-in-out; 
   }
   
 .fa th:hover { 
-transform: scale(1.6); 
-}
-
-.contact-icons{
-  margin: 0;
-  position: absolute;
-  top: 60%;
-  left: 30%;
+transform: scale(1.2); 
 }
 
 .resource-title{
@@ -293,13 +286,40 @@ transform: scale(1.6);
   width: 60%;
 }
 
+.contact-icons{
+  margin: 0;
+  position: absolute;
+  top: 60%;
+  left: 30%;
+}
+
 .contact-icon {
-  font-size: 1em;
   padding: 7px;
+  vertical-align:middle;
 }
 
 .contact-icon--flexbox {
   display: flex;
-  align-items: center;
-  justify-content: center;
+  vertical-align:middle;
+  margin: 0 10px;
+}
+
+.contact-icon:hover img{
+  transform: scale(1.25);
+}
+
+.img-hover-zoom {
+  height: 30px; /* [1.1] Set it as per your need */
+  padding: 7px;
+  /* overflow: hidden;  [1.2] Hide the overflowing of child elements */
+}
+
+/* [2] Transition property for smooth transformation of images */
+.img-hover-zoom img {
+  transition: transform .3s ease;
+}
+
+/* [3] Finally, transforming the image when container gets hovered */
+.img-hover-zoom:hover img{
+  transform: scale(1.25);
 }
