@@ -1,0 +1,47 @@
+<html>
+  <head>
+    <meta charset="utf-8">
+
+    <title>{% block page_title %}Home{% endblock page_title %}</title>
+
+    <link rel=stylesheet type=text/css href="{{ url_for('static', filename='styles.css') }}">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+</head>
+
+<header>
+  <div class="container">
+    <h1 class="logo"></h1>
+
+    <nav>
+      <ul>
+        <li><a href="{{ url_for('showHomepage')}}">Home</a></li>
+        <li><a href="{{ url_for('showProjects')}}">PROJECTS</a></li>
+        <li><a href="{{ url_for('showResources')}}">RESOURCES</a></li>
+        <li><a href="{{ url_for('showContact')}}">CONTACT</a></li>
+        <li><a href="https://github.com/spencerbertsch1">GITHUB</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+  <body>
+    <div class="sentiment_dash_box">   
+        <h2>
+            Check back later! 
+        </h2>
+        <div class="traffic-cone-img">
+          <img src="https://cdn.pixabay.com/photo/2014/04/10/14/01/cone-320960_1280.png" alt="AWS" style="width:77px;height:110px;">
+        </div>
+        <p>
+          Uh Oh, looks like this project is still being deployed on AWS. Try coming back in a few weeks and see if it's up and running. 
+          In the meantime, check out my <a href="https://github.com/spencerbertsch1">github</a> for many other project's I've worked on
+          over the years! 
+        </p>
+    </div>
+  </body>
+
+</html>
