@@ -211,6 +211,13 @@ hr {
   display: block;
 }
 
+.logo{
+  width:260px;
+  height:45px;
+  margin: 0; 
+  padding: 14px;
+}
+
 .fa { 
   transition: all .2s ease-in-out; 
   }
