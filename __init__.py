@@ -56,6 +56,11 @@ def showSentimentDash():
 def showStaySixFtApart():
     return render_template('stay_six_ft_apart.html')
 
+# Web Page #7 - Projects: tensorflow.js test page
+@app.route('/tf_js')
+def showTFJSTest():
+    return render_template('tf_js_test.html')
+
 if __name__ == '__main__':
     app.secret_key = 'super_secret_key'
     app.debug = True
