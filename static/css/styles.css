@@ -9,7 +9,6 @@ body {
 .container {
 	width: 80%;
   margin: 0 auto;
-  
 }
 
 header {
@@ -352,4 +351,21 @@ transform: scale(1.2);
 
 .contact-txt:hover {
   text-decoration: underline;
+}
+
+.tfjs_box {
+  float: left;
+  border: 1px solid #d7d7d7 ;
+  box-shadow: 1px 1px 3px #d7d7d7;
+
+  border-radius: 7px;
+  background: #ffffff;
+
+  margin-left: 80px;
+  margin-top: 100px;
+  padding: 25px;
+  width: 1200px;
+  height: 600px;
+
+  word-wrap: break-word;
 }
