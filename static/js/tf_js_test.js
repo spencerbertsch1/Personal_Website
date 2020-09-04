@@ -1,14 +1,33 @@
 
+// Define parameters to be filled by the user 
+
 var xs = [] // starts empty, to be populated with .push
 var ys = [] // starts empty, to be populated with .push
 var bestfit = [] // to be populated by tf.js
 
-//Create the model
+var loss = ['meanSquaredError'] // to be populated by the .push
+var epochs = [] // to be populated by the .push 
+var optimizer = [] // to be populated by the .push 
+var activation = [] // to be populated by the .push 
+
+
+// GET NETWORK PARAMETERS //
+document.getElementById("append").onclick = function(){
+    var loss_func = document.getElementById("loss_function").value; // grab the loss function
+    var epochs = document.getElementById("y").value; // grab the current value for y
+    var optimizer = document.getElementById("x").value; // grab the current value for x
+    var epochs = document.getElementById("y").value; // grab the current value for y
+
+    loss[0] = loss_func // overwrite the default loss function if the user specifies another 
+
+}
+
+//Create the model using the parameters defined above 
 const model = tf.sequential();
-model.add(tf.layers.leakyReLU({units: 128, inputShape: [1]})); // layer 1
-model.add(tf.layers.leakyReLU({units: 128, inputShape: [128]})); // layer 2
+model.add(tf.layers.dense({units: 128, inputShape: [1]})); // layer 1
+model.add(tf.layers.dense({units: 128, inputShape: [128]})); // layer 2
 model.add(tf.layers.dense({units: 1, inputShape: [128]})); // output layer
-model.compile({loss: 'meanSquaredError', optimizer: 'adam'}); // compile with params
+model.compile({loss: loss[0], optimizer: 'adam'}); // compile with params
 
 document.getElementById('x').value = 1; // create a starting value for our x
 

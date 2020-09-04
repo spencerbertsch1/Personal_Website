@@ -210,6 +210,11 @@ hr {
   display: block;
 }
 
+.tensorflow_img{
+  text-align: center;
+  display: block;
+}
+
 .logo{
   width:250px;
   height:45px;
@@ -240,6 +245,14 @@ transform: scale(1.2);
   margin-right: 300px;
 
   font-size: 20px;
+}
+
+.project-title{
+  margin-top: 30px;
+  margin-bottom: 0px;
+  margin-left: 120px;
+  margin-right: 300px;
+  font-size: 18px;
 }
 
 .grid-container{
@@ -361,11 +374,28 @@ transform: scale(1.2);
   border-radius: 7px;
   background: #ffffff;
 
-  margin-left: 80px;
-  margin-top: 100px;
-  padding: 25px;
-  width: 1200px;
-  height: 600px;
+  margin-left: 70px;
+  margin-top: 40px;
+  padding: 14px;
+  width: 1000px;
+  height: 580px;
+
+  word-wrap: break-word;
+}
+
+.button-box {
+  float: left;
+  border: 1px solid #d7d7d7 ;
+  box-shadow: 1px 1px 3px #d7d7d7;
+
+  border-radius: 7px;
+  background: #ffffff;
+
+  margin-left: 25px;
+  margin-top: 40px;
+  padding: 16px;
+  width: 300px;
+  height: 460px;
 
   word-wrap: break-word;
 }

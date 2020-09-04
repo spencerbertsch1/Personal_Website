@@ -32,6 +32,21 @@
   </header>
   
   <body>
+    <div class="project-title">
+      <h1> 
+        Neural Network Visualizer
+      </h1>
+
+      <p> 
+        This is a simple example of a sequential feed forward network in tensorflow. Feel free to change the 
+        network parameters, add some data to the pallet, and look at the different ways that your neural network 
+        architecture learns from the data! 
+
+        If you need a refresher on network parameters such as loss functions, activation functions, optimizers, 
+        or network size, check out my reference papers on those topics <a href="{{ url_for('showResources')}}">here.</a>
+      </p>
+    </div>
+
     <div class="tfjs_box">  
       x: <input type="text" id="x" />
       y: <input type="text" id="y" />
@@ -45,18 +60,26 @@
       <script src="{{ url_for('static', filename='js/tf_js_test.js') }}"></script>
     </div>
 
-    <img id="myImgId" alt="" src="red.gif" width="400" height="300" />
+    <div class="button-box">
+      <h2>
+        Network Parameters
+      </h2>
+      <br>
 
+      <!-- create drop down so the user can choose their loss function -->
+      <label for="loss_function">Choose a loss function:</label>
+      <select name="loss_function" id="loss_function">
+        <option value="meanAbsoluteError">meanAbsoluteError</option>
+        <option value="meanSquaredError">meanSquaredError</option>
+        <br>
+        <br>
 
-    <div class="coordinate_box">  
-      <script src="{{ url_for('static', filename='js/tf_js_test.js') }}">
-      var myImg = document.getElementById("myImgId");
-      myImg.onmousedown = GetCoordinates;
-      </script>
+        <input type="button" id="set_params" value="submit">
 
-      <img src="red.gif" width="400" height="300" alt="" id="myImgId" />
-      <p>X:<span id="x"></span></p>
-      <p>Y:<span id="y"></span></p>
+        <div class="tensorflow_img">
+          <!-- image source: "https://miro.medium.com/max/5646/1*drjJU_Kns2HREZVfl5NsSw.png" --> 
+          <img src="https://user-images.githubusercontent.com/20422614/92188192-e6b65400-ee29-11ea-913d-af8cc35bfae5.png" alt="TF" style="width:160px;height:70px;">
+        </div>
     </div>
 
   </body>
