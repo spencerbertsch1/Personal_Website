@@ -34,9 +34,11 @@ document.getElementById('x').value = 1; // create a starting value for our x
 // the append id is given to our submit button, this will be called
 document.getElementById("append").onclick = function(){
     var x = document.getElementById("x").value; // grab the current value for x
-    var y = document.getElementById("y").value; // grab the current value for y
+    // var y = document.getElementById("y").value; // grab the current value for y
     xs.push(x) // append that value to the xs
-    ys.push(y) // append that value to the ys
+    // ys.push(y) // append that value to the ys
+    var random_y = Math.floor(Math.random() * 100);  // add random number to y between 0 and 100
+    ys.push(random_y)
     document.getElementById('x').value = parseInt(x)+1; // add 1 to the x automatically
 
     // Train the model...then:
