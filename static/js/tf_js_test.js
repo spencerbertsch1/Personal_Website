@@ -46,14 +46,16 @@ document.getElementById("fit_model").onclick = function(){
                 labels: xs,
                 datasets: [
                 {
-                    label: 'Original Data',
+                    label: 'Sample Data',
                     data: ys,
-                    borderWidth: 1,
+                    borderWidth: 1.5,
+                    borderColor: '#FF9800',
+                    backgroundColor: 'rgba(1,1,1,0)'
                 },{
                     label: 'Best Fit line',
                     data: bestfit,
-                    borderWidth: 1,
-                    borderColor: '#FF0000',
+                    borderWidth: 1.2,
+                    borderColor: '#2196F3',
                     backgroundColor: 'rgba(1,1,1,0)'
                 },]
             },
@@ -85,7 +87,9 @@ document.getElementById("append").onclick = function(){
             {
                 label: 'Sample Data',
                 data: ys,
-                borderWidth: 2,
+                borderWidth: 1.5,
+                borderColor: '#FF9800',
+                backgroundColor: 'rgba(1,1,1,0)'
             },]
         },
     });
