@@ -23,10 +23,13 @@ document.getElementById("append").onclick = function(){
 
 //Create the model using the parameters defined above 
 const model = tf.sequential();
-model.add(tf.layers.dense({units: 128, inputShape: [1]})); // layer 1
-model.add(tf.layers.dense({units: 128, inputShape: [128]})); // layer 2
-model.add(tf.layers.dense({units: 1, inputShape: [128]})); // output layer
-model.compile({loss: loss[0], optimizer: 'adam'}); // compile with params
+model.add(tf.layers.dense({units: 1028, inputShape: [1]})); // layer 1
+model.add(tf.layers.dense({units: 1028, inputShape: [1028], activation:"sigmoid"})); // layer 2
+model.add(tf.layers.dense({units: 1, inputShape: [1028]})); // output layer
+
+const new_optimizer = tf.train.adam(0.01);
+
+model.compile({loss: loss[0], optimizer: new_optimizer}); // compile with params
 
 document.getElementById('x').value = 1; // create a starting value for our x
 
@@ -35,7 +38,9 @@ document.getElementById("fit_model").onclick = function(){
     // function to train a model on the data currently stored in xs and ys 
     // so that the line of best fit can be plotted 
     // Train the model...then:
-    model.fit(tf.tensor(xs), tf.tensor(ys), {epochs:150}).then(() => {
+    model.fit(tf.tensor(xs), tf.tensor(ys), {epochs:450}).then(() => {
+        
+        // calculate the best fit line 
         bestfit = model.predict(tf.tensor(xs, [xs.length, 1])).dataSync(); // create best-fit line from xs data
         var ctx = document.getElementById("myChart").getContext('2d'); // begin chart
         // Chart data and settings:
@@ -46,17 +51,17 @@ document.getElementById("fit_model").onclick = function(){
                 labels: xs,
                 datasets: [
                 {
-                    label: 'Sample Data',
-                    data: ys,
-                    borderWidth: 1.5,
-                    borderColor: '#FF9800',
-                    backgroundColor: 'rgba(1,1,1,0)'
-                },{
                     label: 'Best Fit line',
                     data: bestfit,
-                    borderWidth: 1.2,
+                    borderWidth: 2,
                     borderColor: '#2196F3',
                     backgroundColor: 'rgba(1,1,1,0)'
+                },{
+                label: 'Sample Data',
+                data: ys,
+                borderWidth: 2,
+                borderColor: '#FF9800',
+                backgroundColor: 'rgba(1,1,1,0)'
                 },]
             },
         });
@@ -87,7 +92,37 @@ document.getElementById("append").onclick = function(){
             {
                 label: 'Sample Data',
                 data: ys,
-                borderWidth: 1.5,
+                borderWidth: 2,
+                borderColor: '#FF9800',
+                backgroundColor: 'rgba(1,1,1,0)'
+            },]
+        },
+    });
+
+}
+
+// the append id is given to our submit button, this will be called
+document.getElementById("add_custom").onclick = function(){
+    var x = document.getElementById("x").value; // grab the current value for x
+    var y = document.getElementById("y").value; // grab the current value for y
+    xs.push(x) // append that value to the xs
+    ys.push(y) // append that value to the ys
+    document.getElementById('x').value = parseInt(x)+1; // add 1 to the x automatically
+
+    // plot the current data available in xs and ys
+    var ctx = document.getElementById("myChart").getContext('2d'); // begin chart
+    // Chart data and settings:
+    
+    var myChart = new Chart(ctx, {
+        type: 'line',
+        options: {scales:{yAxes: [{ticks: {beginAtZero: true}}]}},
+        data: {
+            labels: xs,
+            datasets: [
+            {
+                label: 'Sample Data',
+                data: ys,
+                borderWidth: 2,
                 borderColor: '#FF9800',
                 backgroundColor: 'rgba(1,1,1,0)'
             },]
