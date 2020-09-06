@@ -70,7 +70,7 @@ document.getElementById("fit_model").onclick = function(){
 }
 
 // the append id is given to our submit button, this will be called
-document.getElementById("append").onclick = function(){
+document.getElementById("add_random").onclick = function(){
     // Function to add a random number between 0 and 100 inclusive to the list 'ys' and plot the results 
     //
     var random_y = Math.floor(Math.random() * 100);  // add random number to y between 0 and 100
@@ -107,6 +107,69 @@ document.getElementById("add_custom").onclick = function(){
     //
     var y = document.getElementById("y").value; // grab the current value for y
     ys.push(y) // append that value to the ys
+
+    // define the x range to plot over 
+    var x_range = Array.from(Array(ys.length).keys())
+
+    // plot the current data available in xs and ys
+    var ctx = document.getElementById("myChart").getContext('2d'); // begin chart
+    // Chart data and settings:
+    
+    var myChart = new Chart(ctx, {
+        type: 'line',
+        options: {scales:{yAxes: [{ticks: {beginAtZero: true}}]}},
+        data: {
+            labels: x_range,
+            datasets: [
+            {
+                label: 'Sample Data',
+                data: ys,
+                borderWidth: 2,
+                borderColor: '#FF9800',
+                backgroundColor: 'rgba(1,1,1,0)'
+            },]
+        },
+    });
+
+}
+
+
+document.getElementById("remove_data").onclick = function(){
+    // Function to remove the last value from 'ys' and plot the result 
+    //
+    // pop off the last element of the array 'ys' 
+    let popped = ys.pop();
+
+    // define the x range to plot over 
+    var x_range = Array.from(Array(ys.length).keys())
+
+    // plot the current data available in xs and ys
+    var ctx = document.getElementById("myChart").getContext('2d'); // begin chart
+    // Chart data and settings:
+    
+    var myChart = new Chart(ctx, {
+        type: 'line',
+        options: {scales:{yAxes: [{ticks: {beginAtZero: true}}]}},
+        data: {
+            labels: x_range,
+            datasets: [
+            {
+                label: 'Sample Data',
+                data: ys,
+                borderWidth: 2,
+                borderColor: '#FF9800',
+                backgroundColor: 'rgba(1,1,1,0)'
+            },]
+        },
+    });
+
+}
+
+document.getElementById("clear_dataset").onclick = function(){
+    // Function to clear the array 'ys' and plot the result  
+    //
+    // pop off the last element of the array 'ys' 
+    ys.length = 0
 
     // define the x range to plot over 
     var x_range = Array.from(Array(ys.length).keys())
