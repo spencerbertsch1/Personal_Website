@@ -23,11 +23,11 @@ document.getElementById("append").onclick = function(){
 
 //Create the model using the parameters defined above 
 const model = tf.sequential();
-model.add(tf.layers.dense({units: 1028, inputShape: [1]})); // layer 1
-model.add(tf.layers.dense({units: 1028, inputShape: [1028], activation:"sigmoid"})); // layer 2
-model.add(tf.layers.dense({units: 1, inputShape: [1028]})); // output layer
+model.add(tf.layers.dense({units: 2056, inputShape: [1]})); // layer 1
+model.add(tf.layers.dense({units: 2056, inputShape: [2056], activation:"sigmoid"})); // layer 2
+model.add(tf.layers.dense({units: 1, inputShape: [2056]})); // output layer
 
-const new_optimizer = tf.train.adam(0.01);
+const new_optimizer = tf.train.adam(0.0085);
 
 model.compile({loss: loss[0], optimizer: new_optimizer}); // compile with params
 
@@ -38,7 +38,7 @@ document.getElementById("fit_model").onclick = function(){
     // function to train a model on the data currently stored in xs and ys 
     // so that the line of best fit can be plotted 
     // Train the model...then:
-    model.fit(tf.tensor(xs), tf.tensor(ys), {epochs:450}).then(() => {
+    model.fit(tf.tensor(xs), tf.tensor(ys), {epochs:200}).then(() => {
         
         // calculate the best fit line 
         bestfit = model.predict(tf.tensor(xs, [xs.length, 1])).dataSync(); // create best-fit line from xs data
@@ -53,7 +53,8 @@ document.getElementById("fit_model").onclick = function(){
                 {
                     label: 'Best Fit line',
                     data: bestfit,
-                    borderWidth: 2,
+                    borderDash: [10,5],
+                    borderWidth: 2.5,
                     borderColor: '#2196F3',
                     backgroundColor: 'rgba(1,1,1,0)'
                 },{
