@@ -1,6 +1,6 @@
 
 // Define parameters to be filled by the user 
-var ys = [] // starts empty, to be populated with .push
+var ys = [78, 23, 54, 50] // starts with a few samples which can always be changed later in the GUI
 var bestfit = [] // to be populated by tf.js
 
 var loss = ['meanSquaredError'] // to be populated by the .push
@@ -8,6 +8,67 @@ var epochs = [] // to be populated by the .push
 var optimizer = [] // to be populated by the .push 
 var activation = [] // to be populated by the .push 
 
+// define the x range to plot over 
+var x_range = Array.from(Array(ys.length).keys())
+
+// plot the current data available in xs and ys
+var ctx = document.getElementById("myChart").getContext('2d'); // begin chart
+// Chart data and settings:
+
+var myChart = new Chart(ctx, {
+    type: 'line',
+    options: {scales:{yAxes: [{ticks: {beginAtZero: true}}]}},
+    data: {
+        labels: x_range,
+        datasets: [
+        {
+            label: 'Sample Data',
+            data: ys,
+            borderWidth: 2,
+            borderColor: '#FF9800',
+            backgroundColor: 'rgba(1,1,1,0)'
+        },]
+    },
+});
+
+// --- READ FORM TO GET NETWORK PARAMETERS --- 
+document.getElementById("clear_dataset").onclick = function(){
+    // Function to clear the array 'ys' and plot the result  
+    //
+    // pop off the last element of the array 'ys' 
+    ys.length = 0
+
+    // define the x range to plot over 
+    var x_range = Array.from(Array(ys.length).keys())
+
+    // plot the current data available in xs and ys
+    var ctx = document.getElementById("myChart").getContext('2d'); // begin chart
+    // Chart data and settings:
+    
+    var myChart = new Chart(ctx, {
+        type: 'line',
+        options: {scales:{yAxes: [{ticks: {beginAtZero: true}}]}},
+        data: {
+            labels: x_range,
+            datasets: [
+            {
+                label: 'Sample Data',
+                data: ys,
+                borderWidth: 2,
+                borderColor: '#FF9800',
+                backgroundColor: 'rgba(1,1,1,0)'
+            },]
+        },
+    });
+
+}
+
+
+document.getElementById("network_params").onclick = function(){
+    //this function is designed to update the default network parameters whenever
+    // someone enters new parameters into the parameter section and clicks 'Update Parameters' 
+
+}
 
 // GET NETWORK PARAMETERS //
 // document.getElementById("append").onclick = function(){
@@ -22,12 +83,13 @@ var activation = [] // to be populated by the .push
 //Create the model using the parameters defined above 
 const model = tf.sequential();
 model.add(tf.layers.dense({units: 2056, inputShape: [1]})); // layer 1
-model.add(tf.layers.dense({units: 2056, inputShape: [2056], activation:"sigmoid"})); // layer 2
+model.add(tf.layers.dense({units: 2056, inputShape: [2056], activation:"relu"})); // layer 2
 model.add(tf.layers.dense({units: 1, inputShape: [2056]})); // output layer
 
-const new_optimizer = tf.train.adam(0.0085);
+// define custom optimizer based on Adam 
+const custom_adam = tf.train.adam(0.0085);
 
-model.compile({loss: loss[0], optimizer: new_optimizer}); // compile with params
+model.compile({loss: loss[0], optimizer: custom_adam}); // compile with params
 
 document.getElementById("fit_model").onclick = function(){
     // function to train a model on the data currently stored in xs and ys 
@@ -100,6 +162,7 @@ document.getElementById("add_random").onclick = function(){
     });
 
 }
+
 
 // the append id is given to our submit button, this will be called
 document.getElementById("add_custom").onclick = function(){

@@ -47,6 +47,62 @@
       </p>
     </div>
 
+    <!-- Network Parameter Input Section -->
+    <div class="button-box">
+
+      <div class="button-title">
+        <h2> 
+          Network Parameters
+        </h2>
+      </div>
+
+      <!-- Loss Function -->
+      Choose Loss Function: <select name="loss" id="loss">
+        <option value="MSE">MSE</option>
+        <option value="MAE">MAE</option>
+      </select>
+      <br>
+
+      <!-- Number of Epochs -->
+      <p>Choose number of epochs:</p>
+      <div class="slidecontainer_epochs">
+        <input type="range" min="50" max="350" value="150" class="slider" id="EpochRange">
+        <p>Epochs: <span id="epoch_demo"></span></p>
+      </div>
+      
+      <script>
+      var slider = document.getElementById("EpochRange");
+      var output = document.getElementById("epoch_demo");
+      output.innerHTML = slider.value;
+      
+      slider.oninput = function() {
+        output.innerHTML = this.value;
+      }
+      </script>
+
+      <!-- Activation Function -->
+      Choose Activation Function: <select name="activation" id="activation">
+        <option value="ReLU">ReLU</option>
+        <option value="Sigmoid">Sigmoid</option>
+        <option value="Linear">Linear</option>
+      </select>
+      <br>
+      <br>
+
+      <!-- Optimizer -->
+      Choose Optimizer: <select name="optimizer" id="optimizer">
+        <option value="adam">Adam</option>
+        <option value="adagrad">Adagrad</option>
+        <option value="rmsprop">RMSprop</option>
+      </select>
+      <br>
+      <br>
+
+      <input type="button" id="network_params" value="Update Network Parameters">
+
+    </div>
+
+    <!-- Network Visualization Section -->
     <div class="tfjs_box">  
       New Data: <input type="text" id="y" />
 
@@ -54,7 +110,7 @@
 
       <input type="button" id="add_random" value="Add Random Point">
 
-      <input type="button" id="remove_data" value="Remove Data">
+      <input type="button" id="remove_data" value="Remove Point">
 
       <input type="button" id="clear_dataset" value="Clear Data Set">
 
