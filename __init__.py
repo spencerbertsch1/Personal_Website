@@ -59,7 +59,12 @@ def showStaySixFtApart():
 # Web Page #7 - Projects: tensorflow.js test page
 @app.route('/tf_js')
 def showTFJSTest():
-    return render_template('tf_js_test.html')
+    return render_template('tf_js_sandbox.html')
+
+# Web Page #8 - Projects: pong AI game 
+@app.route('/ai_pong')
+def showAIPong():
+    return render_template('ai_pong.html')
 
 if __name__ == '__main__':
     app.secret_key = 'super_secret_key'

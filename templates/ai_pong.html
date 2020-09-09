@@ -1,0 +1,57 @@
+<html>
+  <head>
+    <meta charset="utf-8">
+
+    <title>{% block page_title %}Home{% endblock page_title %}</title>
+
+    <link rel=stylesheet type=text/css href="{{ url_for('static', filename='css/styles.css') }}">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+</head>
+
+<header>
+  <div class="container">
+    <img src="https://user-images.githubusercontent.com/20422614/91669451-1dffca80-eae3-11ea-822a-c27c0b12814c.png" alt="logo" class="logo">
+
+    <nav>
+      <ul>
+        <li><a href="{{ url_for('showHomepage')}}">Home</a></li>
+        <li><a href="{{ url_for('showProjects')}}">PROJECTS</a></li>
+        <li><a href="{{ url_for('showResources')}}">RESOURCES</a></li>
+        <li><a href="{{ url_for('showContact')}}">CONTACT</a></li>
+        <li><a href="https://github.com/spencerbertsch1">GITHUB</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+  <body>
+    <div class="contact-text-box">
+      <div class="contact-title">
+        <h1> 
+          Get in touch! 
+        </h1>
+      </div>
+      <p>
+        I'll respond to email, but the quickest way to get in touch would be to connect or message me on LinkedIn.
+      </p>
+
+        <div class="contact-icon">
+          <a href="https://www.linkedin.com/in/spencerbertsch/" target="_blank" style="color: #000000; text-decoration: none;"><i class="fa fa-linkedin" style="font-size:24px;color:#619bff"></i><span class="contact-txt"> Spencer Bertsch</span></a>
+        </div>
+
+        <div class="contact-icon">
+          <a href="https://github.com/spencerbertsch1" target="_blank" style="color: #000000; text-decoration: none;"><i class="fa fa-github" style="font-size:24px;color:#619bff"></i><span class="contact-txt" > spencerbertsch1</span></a>
+        </div>
+
+        <div class="contact-icon">
+          <a href="mailto:sbertsch.dev@gmail.com" target="_blank" style="color: #000000; text-decoration: none;"><i class="fa fa-envelope-o" style="font-size:24px;color:#619bff"></i><span class="contact-txt" > sbertsch.dev@gmail.com</span></a>
+        </div>
+
+    </div>
+  </body>
+
+</html>
