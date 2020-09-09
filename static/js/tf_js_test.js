@@ -1,6 +1,6 @@
 
 // Define parameters to be filled by the user 
-var ys = [78, 23, 54, 50] // starts with a few samples which can always be changed later in the GUI
+var ys = [78, 23, 54, 50, 73, 34] // starts with a few samples which can always be changed later in the GUI
 // var bestfit = [] // to be populated by tf.js
 
 var LOSS = {'val': 'meanSquaredError'}; // to be populated by the .push
@@ -56,6 +56,11 @@ document.getElementById("network_params").onclick = function(){
     } else {
         OPTIMIZER["val"] = optimizer
     }
+
+    // Flash success message after network parameters get updated 
+    var x = document.getElementById("snackbar");
+    x.className = "show";
+    setTimeout(function(){ x.className = x.className.replace("show", ""); }, 3000);
 }
 
 document.getElementById("fit_model").onclick = function(){
@@ -112,6 +117,8 @@ document.getElementById("fit_model").onclick = function(){
         });
         myChart.update();
     });
+
+    ('#loader').addClass("hide");
 
 }
 

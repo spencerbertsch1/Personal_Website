@@ -42,8 +42,8 @@
         network parameters, add some data to the pallet, and look at the different ways that your neural network 
         architecture learns from the data! 
 
-        If you need a refresher on network parameters such as loss functions, activation functions, optimizers, 
-        or network size, check out my reference papers on those topics <a href="{{ url_for('showResources')}}">here.</a>
+        If you need a refresher on network parameters such as loss functions, epochs, activation functions, 
+        or optimizers, check out my reference papers on those topics <a href="{{ url_for('showResources')}}">here.</a>
       </p>
     </div>
 
@@ -98,7 +98,9 @@
       <br>
       <br>
 
-      <input type="button" id="network_params" value="Update Network Parameters">
+      <button onclick="myFunction()" id="network_params">Update Network Parameters</button>
+      
+      <div id="snackbar">Network Parameters Updated!</div>
 
     </div>
 
