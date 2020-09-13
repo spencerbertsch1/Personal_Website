@@ -29,9 +29,33 @@
 </header>
 
   <body>
-        <p> TEST </p>
+    <div class="button-box">
 
-        <canvas id="canvas-container" width="500" height="800">No canvas support</canvas>
+        <div class="button-title">
+          <h2> 
+            Choose your AI Opponent
+          </h2>
+        </div>
+  
+        <button onclick="myFunction()" id="rules_AI">Rules Based AI</button>
+        <br>
+        <br>
+        <button onclick="myFunction()" id="tf_AI">Tensorflow AI</button>
+        <br>
+        <br>
+        <button onclick="myFunction()" id="rl_AI">Reinforcement Learning AI</button>
+        
+        <div id="snackbar">AI Opponent Chosen!</div>
+  
+      </div>
+
+
+
+        <p> This project is in progress - prorotype can be seen below. </p>
+
+        <div id="canvas-container">
+            <canvas id="game_canvas">Your browser doesn't support canvas. Please open this page in Google Chrome.</canvas>
+        </div>
 
         <script src="{{ url_for('static', filename='js/ai_pong.js') }}"></script>
   </body>
