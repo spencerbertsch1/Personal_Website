@@ -379,7 +379,7 @@ transform: scale(1.2);
   margin-bottom: 40px;
   padding: 14px;
   width: 1400px;
-  height: 720px;
+  height: 710px;
 
   word-wrap: break-word;
 }
@@ -452,7 +452,7 @@ transform: scale(1.2);
 
 .loader {
   border: 16px solid #f3f3f3; /* Light grey */
-  border-top: 16px solid #3498db; /* Blue */
+  border-top: 16px solid #347fdb; /* Blue */
   border-radius: 50%;
   width: 120px;
   height: 120px;
@@ -481,4 +481,34 @@ transform: scale(1.2);
   height: 720px;
 
   word-wrap: break-word;
+}
+
+.game_canvas {
+  padding-top: 50;
+  padding-left: 50;
+  padding-right: 0;
+  margin-top: 100;
+  margin-left: 100;
+  margin-right: auto;
+  display: block;
+  width: 800px;
+}
+
+#canvas-container {
+  padding-top: 50px;
+  padding-left: 50px;
+  padding-right: 50px;
+  margin-top: 100px;
+  margin-left: 100px;
+  margin-right: auto;
+  display: block;
+}
+
+#canvas {
+  position: absolute;
+  top:0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin:auto;
 }

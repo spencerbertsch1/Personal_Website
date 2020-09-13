@@ -19,19 +19,21 @@
     <nav>
       <ul>
         <li><a href="{{ url_for('showHomepage')}}">Home</a></li>
+        <li><a href="{{ url_for('showAbout')}}">ABOUT</a></li>
         <li><a href="{{ url_for('showProjects')}}">PROJECTS</a></li>
         <li><a href="{{ url_for('showResources')}}">RESOURCES</a></li>
         <li><a href="{{ url_for('showContact')}}">CONTACT</a></li>
-        <li><a href="https://github.com/spencerbertsch1">GITHUB</a></li>
       </ul>
     </nav>
   </div>
 </header>
 
   <body>
-    <div class="pong-box">
-        <script src="pong.js"></script>
-    </div>
+        <p> TEST </p>
+
+        <canvas id="canvas-container" width="500" height="800">No canvas support</canvas>
+
+        <script src="{{ url_for('static', filename='js/ai_pong.js') }}"></script>
   </body>
 
 </html>
