@@ -1,14 +1,73 @@
 <html>
-<head>
-	<link rel=stylesheet type=text/css href="{{ url_for('static', filename='css/styles.css') }}">
-	</head>
+  <head>
+    <meta charset="utf-8">
+
+    <title>{% block page_title %}Home{% endblock page_title %}</title>
+
+    <link rel=stylesheet type=text/css href="{{ url_for('static', filename='css/styles.css') }}">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+</head>
+
+<header>
+  <div class="container">
+    <!--LOGO 1: https://user-images.githubusercontent.com/20422614/91669860-5f45a980-eae6-11ea-99a1-d355a526d796.png-->
+    <!--LOGO 2: https://user-images.githubusercontent.com/20422614/91669433-f6a8fd80-eae2-11ea-91a0-b64de20a6d02.png-->
+    <img src="https://user-images.githubusercontent.com/20422614/91669451-1dffca80-eae3-11ea-822a-c27c0b12814c.png" alt="logo" class="logo">
+
+    <nav>
+      <ul>
+        <li><a href="{{ url_for('showHomepage')}}">Home</a></li>
+        <li><a href="{{ url_for('showProjects')}}">PROJECTS</a></li>
+        <li><a href="{{ url_for('showResources')}}">RESOURCES</a></li>
+        <li><a href="{{ url_for('showContact')}}">CONTACT</a></li>
+        <li><a href="https://github.com/spencerbertsch1" target="_blank">GITHUB</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
 
   <body>
-    <h1>About</h1>
 
-    <div>
-    <a class="buttons" href="{{ url_for('showHomepage') }}">Return to Homepage</a>
+    <div class="about_text_box">
+      <h2>Experience</h2>
+
+      <p>Developed ML Pipelines</p>
+
+      <p>Developed ML Pipelines</p>
     </div>
+
+    <div class="about_cert_box">
+      <h1> 
+        Licenes and Certifications
+      </h1>
+      
+      <p>
+        3 AWS 
+        <br>
+        <br>
+        3 Finra
+      </p>
+
+      <div class="aws-img">
+        <img src="https://user-images.githubusercontent.com/20422614/90550679-450ee180-e15e-11ea-9926-37f32bdaf733.png" alt="AWS" style="width:140px;height:25px;">
+      </div>
+    </div>
+
   </body>
+
+
+  <div class="footer-home">
+    <br>
+      <hr>
+    <br>
+    <a href="https://www.linkedin.com/in/spencerbertsch/" target="_blank"><i class="fa fa-linkedin" style="font-size:24px;color:#2962FF"></i></a>
+    &emsp; <a href="https://github.com/spencerbertsch1" target="_blank"><i class="fa fa-github" style="font-size:24px;color:#2962FF"></i></a>
+    
+    <p class="light-text" style="color:gray"> Spencer Bertsch &copy; 2020 </p>
+  </div>
 
 </html>
