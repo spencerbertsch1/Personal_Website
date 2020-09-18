@@ -66,6 +66,11 @@ def showTFJSTest():
 def showAIPong():
     return render_template('ai_pong.html')
 
+# Web Page #9 - Projects: path finder 
+@app.route('/path_finder')
+def showPathFinder():
+    return render_template('path_finder.html')
+
 if __name__ == '__main__':
     app.secret_key = 'super_secret_key'
     app.debug = True
