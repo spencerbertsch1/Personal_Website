@@ -37,9 +37,10 @@ function Spot(i, j) {
 function setup(){
     createCanvas(400, 400);
     console.log('A*');
-
+  
+    // Grid cell size
     w = width / cols;
-    h = height / rows; 
+    h = height / rows;
 
     // create the grid from the array of all the columns 
     // basically just an array of arrays 

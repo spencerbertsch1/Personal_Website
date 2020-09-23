@@ -483,16 +483,6 @@ transform: scale(1.2);
   word-wrap: break-word;
 }
 
-#canvas-container {
-  padding-top: 50px;
-  padding-left: 50px;
-  padding-right: 50px;
-  margin-top: 100px;
-  margin-left: 100px;
-  margin-right: auto;
-  display: block;
-}
-
 #canvas {
   position: absolute;
   top:0;
@@ -570,6 +560,25 @@ transform: scale(1.2);
   padding: 20px;
   width: 360px;  /* <-- just make sure this is double the 4th argument to 'margin' above to center horizontally */
   height: 230px;
+
+  word-wrap: break-word;
+}
+
+#path_finder_canvas{
+  border: 1px solid #d7d7d7 ;
+  box-shadow: 1px 1px 3px #d7d7d7;
+  border-radius: 7px;
+  background: #ffffff;
+
+  /* Center vertically and horizontally */
+  position: absolute;
+  top: 35%;
+  left: 50%;
+  margin: -160px 0 0 -200px; /* apply negative top and left margins to truly center the element */
+
+  padding: 20px;
+  width: 800px;  /* <-- just make sure this is double the 4th argument to 'margin' above to center horizontally */
+  height: 800px;
 
   word-wrap: break-word;
 }
