@@ -63,6 +63,8 @@ function Paddle(x, y, width, height) {
     context.fillRect(this.x, this.y, this.width, this.height);
   };
 
+
+
 // put the players paddle at the bottom
 function Player() {
     this.paddle = new Paddle(175, 580, 50, 10);
@@ -91,7 +93,9 @@ function Ball(x, y) {
     this.y_speed = 3;
     this.radius = 5;
   }
-  
+
+
+
 // create a function to render the ball 
 Ball.prototype.render = function() {
     context.beginPath();
@@ -113,6 +117,8 @@ var render = function() {
     computer.render();
     ball.render();
   };
+
+/*
 
 // add animation to the ball
 var update = function() {
@@ -238,6 +244,8 @@ var update = function() {
     }
   };
 
+*/
+
 // --- Choose Rules Based AI --- 
 document.getElementById("rules_AI").onclick = function(){
     // todo 
@@ -259,7 +267,7 @@ document.getElementById("tf_AI").onclick = function(){
 }
 
 // --- Reinforcement Learning AI --- 
-document.getElementById("rf_AI").onclick = function(){
+document.getElementById("rl_AI").onclick = function(){
     // todo 
 
     // Flash success message after network parameters get updated 
