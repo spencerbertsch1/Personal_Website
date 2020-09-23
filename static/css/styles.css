@@ -483,17 +483,6 @@ transform: scale(1.2);
   word-wrap: break-word;
 }
 
-.game_canvas {
-  padding-top: 50;
-  padding-left: 50;
-  padding-right: 0;
-  margin-top: 100;
-  margin-left: 100;
-  margin-right: auto;
-  display: block;
-  width: 800px;
-}
-
 #canvas-container {
   padding-top: 50px;
   padding-left: 50px;
@@ -543,6 +532,42 @@ transform: scale(1.2);
   padding: 16px;
   width: 465px;
   height: 610px;
+
+  word-wrap: break-word;
+}
+
+#game_canvas{
+  border: 1px solid #d7d7d7 ;
+  box-shadow: 1px 1px 3px #d7d7d7;
+  border-radius: 7px;
+  background: #ffffff;
+
+  /* Center vertically and horizontally */
+  position: absolute;
+  top: 30%;
+  left: 50%;
+  margin: -160px 0 0 -200px; /* apply negative top and left margins to truly center the element */
+
+  padding: 20px;
+  width: 400px;  /* <-- just make sure this is double the 4th argument to 'margin' above to center horizontally */
+  height: 600px;
+
+  word-wrap: break-word;
+}
+
+.pong-button-box{
+  float: left;
+  border: 1px solid #d7d7d7 ;
+  box-shadow: 1px 1px 3px #d7d7d7;
+
+  border-radius: 7px;
+  background: #ffffff;
+
+  margin-left: 700px;
+  margin-top: 250px;
+  padding: 16px;
+  width: 350px;
+  height: 250px;
 
   word-wrap: break-word;
 }
