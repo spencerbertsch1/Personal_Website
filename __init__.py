@@ -71,6 +71,11 @@ def showAIPong():
 def showPathFinder():
     return render_template('path_finder.html')
 
+# Web Page #10 - Projects: SageMaker Endpoint
+@app.route('/sm_endpoint')
+def showSageMakerEndpoint():
+    return render_template('sagemaker_endpoint.html')
+
 if __name__ == '__main__':
     app.secret_key = 'super_secret_key'
     app.debug = True

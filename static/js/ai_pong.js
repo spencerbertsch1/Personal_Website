@@ -118,7 +118,6 @@ var render = function() {
     ball.render();
   };
 
-/*
 
 // add animation to the ball
 var update = function() {
@@ -243,8 +242,6 @@ var update = function() {
       this.paddle.x = 400 - this.paddle.width;
     }
   };
-
-*/
 
 // --- Choose Rules Based AI --- 
 document.getElementById("rules_AI").onclick = function(){
