@@ -408,6 +408,11 @@ transform: scale(1.2);
   text-align: center;
 }
 
+.button-box-text{
+  margin-top: 30px;
+  text-align: center;
+}
+
 #snackbar {
   visibility: hidden;
   min-width: 250px;
@@ -559,7 +564,7 @@ transform: scale(1.2);
 
   padding: 20px;
   width: 360px;  /* <-- just make sure this is double the 4th argument to 'margin' above to center horizontally */
-  height: 230px;
+  height: 260px;
 
   word-wrap: break-word;
 }
@@ -581,4 +586,115 @@ transform: scale(1.2);
   height: 800px;
 
   word-wrap: break-word;
+}
+
+/* GAME BUTTON 1: RULES BASED AI */
+.rb_game_button {
+  border-radius: 4px;
+  background-color: #FFB300;
+  border: none;
+  color: #FFFFFF;
+  text-align: center;
+  font-size: 15px;
+  padding: 6px;
+  width: 160px;
+  height: 30px;
+  transition: all 0.5s;
+  cursor: pointer;
+  margin: 2px;
+}
+.rb_game_button span {
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+  transition: 0.5s;
+}
+.rb_game_button span:after {
+  content: '\00bb';
+  position: absolute;
+  opacity: 0;
+  top: 0;
+  left: -20px;
+  transition: 0.5s;
+}
+.rb_game_button:hover span {
+  padding-left: 25px;
+}
+.rb_game_button:hover span:after {
+  opacity: 1;
+  left: 0;
+}
+
+/* GAME BUTTON 2: TENSORFLOW AI */
+.tf_game_button {
+  border-radius: 4px;
+  background-color: #FFB300;
+  border: none;
+  color: #FFFFFF;
+  text-align: center;
+  font-size: 15px;
+  padding: 6px;
+  width: 150px;
+  height: 30px;
+  transition: all 0.5s;
+  cursor: pointer;
+  margin: 2px;
+}
+.tf_game_button span {
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+  transition: 0.5s;
+}
+.tf_game_button span:after {
+  content: '\00bb';
+  position: absolute;
+  opacity: 0;
+  top: 0;
+  left: -20px;
+  transition: 0.5s;
+}
+.tf_game_button:hover span {
+  padding-left: 25px;
+}
+.tf_game_button:hover span:after {
+  opacity: 1;
+  left: 0;
+}
+
+/* GAME BUTTON 3: REINFORCEMENT LEARNING AI */
+.rl_game_button {
+  border-radius: 4px;
+  background-color: #FFB300;
+  border: none;
+  color: #FFFFFF;
+  text-align: center;
+  font-size: 15px;
+  padding: 6px;
+  width: 230px;
+  height: 30px;
+  transition: all 0.5s;
+  cursor: pointer;
+  margin: 2px;
+}
+.rl_game_button span {
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+  transition: 0.5s;
+}
+.rl_game_button span:after {
+  content: '\00bb';
+  position: absolute;
+  opacity: 0;
+  top: 0;
+  left: -20px;
+  transition: 0.5s;
+}
+.rl_game_button:hover span {
+  padding-left: 25px;
+}
+.rl_game_button:hover span:after {
+  opacity: 1;
+  left: 0;
 }
