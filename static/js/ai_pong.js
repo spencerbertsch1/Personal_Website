@@ -47,6 +47,14 @@ var render = function() {
   // context.fillRect(100, 0, 100, 50);
 };
 
+// create scores for computer and player to be updated during the game 
+var computer_score = 0
+document.getElementById("computerScore").innerHTML = computer_score;
+
+var player_score = 0 
+document.getElementById("playerScore").innerHTML = player_score;
+
+
 // create function to animate paddle 
 function Paddle(x, y, width, height) {
     this.x = x;
@@ -233,6 +241,9 @@ Ball.prototype.update = function(paddle1, paddle2) {
     this.y_speed = 0; // <-- change the y speed to 0 until button is pressed! 
     this.x = 200;
     this.y = 300;
+
+    // increment the computer score by 1
+    computer_score += 1
     }
 
   // YOU WIN A POINT 
@@ -241,6 +252,9 @@ Ball.prototype.update = function(paddle1, paddle2) {
     this.y_speed = 0; // <-- change the y speed to 0 until button is pressed! 
     this.x = 200;
     this.y = 300;
+
+    // increment the player score by 1
+    player_score += 1
     }
 
     // after winning a point or losing a point, press the space bar to begin the next game 
