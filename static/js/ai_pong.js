@@ -47,14 +47,6 @@ var render = function() {
   // context.fillRect(100, 0, 100, 50);
 };
 
-// create scores for computer and player to be updated during the game 
-var computer_score = 0
-document.getElementById("computerScore").innerHTML = computer_score;
-
-var player_score = 0 
-document.getElementById("playerScore").innerHTML = player_score;
-
-
 // create function to animate paddle 
 function Paddle(x, y, width, height) {
     this.x = x;
@@ -70,8 +62,6 @@ function Paddle(x, y, width, height) {
     context.fillStyle = "#BDBDBD";
     context.fillRect(this.x, this.y, this.width, this.height);
   };
-
-
 
 // put the players paddle at the bottom
 function Player() {
@@ -101,8 +91,6 @@ function Ball(x, y) {
     this.y_speed = 3;
     this.radius = 5;
   }
-
-
 
 // create a function to render the ball 
 Ball.prototype.render = function() {
@@ -202,6 +190,11 @@ var update = function() {
     }
   }
 
+  
+// create scores for computer and player to be updated during the game 
+var computer_score = 0
+var player_score = 0 
+
   // add bounderies for the ball
 Ball.prototype.update = function(paddle1, paddle2) {
   this.x += this.x_speed;
@@ -235,7 +228,7 @@ Ball.prototype.update = function(paddle1, paddle2) {
     }
   }
 
-  // YOU LOSE A POINT 
+  // YOU WIN A POINT 
   if (this.y < 0) { 
     this.x_speed = 0;
     this.y_speed = 0; // <-- change the y speed to 0 until button is pressed! 
@@ -243,10 +236,13 @@ Ball.prototype.update = function(paddle1, paddle2) {
     this.y = 300;
 
     // increment the computer score by 1
-    computer_score += 1
+    player_score += 1
+
+    // update the value retrieved by the html page 
+    document.getElementById("playerScore").innerHTML = player_score;
     }
 
-  // YOU WIN A POINT 
+  // YOU LOSE A POINT 
   if (this.y > 600) { 
     this.x_speed = 0;
     this.y_speed = 0; // <-- change the y speed to 0 until button is pressed! 
@@ -254,7 +250,10 @@ Ball.prototype.update = function(paddle1, paddle2) {
     this.y = 300;
 
     // increment the player score by 1
-    player_score += 1
+    computer_score += 1
+
+    // update the value retrieved by the html page 
+    document.getElementById("computerScore").innerHTML = computer_score;
     }
 
     // after winning a point or losing a point, press the space bar to begin the next game 
