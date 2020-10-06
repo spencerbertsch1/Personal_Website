@@ -1,0 +1,10 @@
+[project]
+name = "Personal Website"
+description = "Personal website to host projects and articles."
+version = "1.0.1"
+author = "Spencer Bertsch"
+
+[style]
+navbar-color = "#03A9F4"
+main-text-color = "000000"
+hilight-text-color = "f59f00"
