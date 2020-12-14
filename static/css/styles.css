@@ -133,7 +133,7 @@ nav a:hover::before {
   margin-top: 40px;
   padding: 16px;
   width: 465px;
-  height: 610px;
+  height: 625px;
 
   word-wrap: break-word;
 }
@@ -591,7 +591,7 @@ transform: scale(1.2);
 /* GAME BUTTON 1: RULES BASED AI */
 .rb_game_button {
   border-radius: 4px;
-  background-color: #FFB300;
+  background-color: #ff1744;
   border: none;
   color: #FFFFFF;
   text-align: center;
@@ -628,7 +628,7 @@ transform: scale(1.2);
 /* GAME BUTTON 2: TENSORFLOW AI */
 .tf_game_button {
   border-radius: 4px;
-  background-color: #FFB300;
+  background-color: #ff1744;
   border: none;
   color: #FFFFFF;
   text-align: center;
@@ -665,7 +665,7 @@ transform: scale(1.2);
 /* GAME BUTTON 3: REINFORCEMENT LEARNING AI */
 .rl_game_button {
   border-radius: 4px;
-  background-color: #FFB300;
+  background-color: #ff1744;
   border: none;
   color: #FFFFFF;
   text-align: center;
