@@ -105,24 +105,23 @@ nav a:hover::before {
 }
 
 .image-box {
-  float: left;
+  /* float: left; */
   border: 1px solid #d7d7d7 ;
   box-shadow: 1px 1px 3px #d7d7d7;
 
   border-radius: 7px;
   background: #ffffff;
 
-  margin-left: 390px;
-  margin-top: 40px;
+  /* margin-left: 390px; */
+  /* margin-top: 40px; */
   padding: 14px;
   width: 320px;
   height: 435px;
 
-  word-wrap: break-word;
 }
 
 .text-box {
-  float: left;
+  /* float: left;  */
   border: 1px solid #d7d7d7 ;
   box-shadow: 1px 1px 3px #d7d7d7;
 
@@ -130,12 +129,20 @@ nav a:hover::before {
   background: #ffffff;
 
   margin-left: 25px;
-  margin-top: 40px;
+  /* margin-top: 40px; */
   padding: 16px;
   width: 465px;
   height: 625px;
 
   word-wrap: break-word;
+}
+
+.homepage{
+  display: flex;
+  flex-direction: row;
+  justify-content: center; 
+  margin-top: 40px;
+
 }
 
 .contact-text-box{

@@ -12,7 +12,7 @@ from flask import session as login_session
 import random
 import string
 
-import httplib2
+# import httplib2
 import json
 from flask import make_response
 import requests
@@ -79,4 +79,4 @@ def showSageMakerEndpoint():
 if __name__ == '__main__':
     app.secret_key = 'super_secret_key'
     app.debug = True
-    app.run(host='0.0.0.0', port=5000)
+    app.run(host='0.0.0.0', port=5001)
