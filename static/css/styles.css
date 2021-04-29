@@ -33,9 +33,16 @@ header::after {
 }
 
 
-.logo {
+.logo{
   float: left;
   padding: 10px 0;
+}
+
+.logo{
+  width:210px;
+  height:45px;
+  margin: 0; 
+  padding: 14px;
 }
 
 nav {
@@ -205,13 +212,6 @@ hr {
 .tensorflow_img{
   text-align: center;
   display: block;
-}
-
-.logo{
-  width:250px;
-  height:45px;
-  margin: 0; 
-  padding: 14px;
 }
 
 .fa { 
