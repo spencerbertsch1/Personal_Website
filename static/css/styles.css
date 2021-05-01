@@ -12,7 +12,8 @@ body {
 }
 
 header {
-  background: #2979FF;  
+  /* background: #2979FF;   */
+  background: #2e2e2e;
   box-shadow: 0px 3px 11px rgb(184, 184, 184);
   border-radius: 1px;
 }
@@ -39,7 +40,7 @@ header::after {
 }
 
 .logo{
-  width:210px;
+  width:225px;
   height:45px;
   margin: 0; 
   padding: 14px;
@@ -124,7 +125,7 @@ nav a:hover::before {
   /* margin-top: 40px; */
   padding: 16px;
   width: 465px;
-  height: 625px;
+  height: 648px;
 
   word-wrap: break-word;
 }
@@ -143,17 +144,23 @@ nav a:hover::before {
   border-radius: 7px;
   background: #ffffff;
 
-  /* Center vertically and horizontally */
+  /* Center vertically and horizontally 
   position: absolute;
   top: 30%;
   left: 50%;
-  margin: -120px 0 0 -220px; /* apply negative top and left margins to truly center the element */
+  margin: -120px 0 0 -220px;  apply negative top and left margins to truly center the element */
 
   padding: 20px;
-  width: 460px;
-  height: 285px;
+  width: 309px;
+  height: 165px;
+  margin-top: 10px;
 
   word-wrap: break-word;
+}
+
+.contact-title h1{
+  margin-top: 2px;
+  margin-bottom: 2px;
 }
 
 .sentiment_dash_box{
@@ -313,7 +320,7 @@ transform: scale(1.2);
 }
 
 .contact-text {
-  width: 60%;
+  width: 100%;
 }
 
 .contact-icons{

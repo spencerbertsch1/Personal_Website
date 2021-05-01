@@ -19,15 +19,15 @@
   <div class="container">
     <!--LOGO 1: https://user-images.githubusercontent.com/20422614/91669860-5f45a980-eae6-11ea-99a1-d355a526d796.png-->
     <!--LOGO 2: https://user-images.githubusercontent.com/20422614/91669433-f6a8fd80-eae2-11ea-91a0-b64de20a6d02.png-->
-    <img src="./static/img/navbar3.png" alt="logo" class="logo">
+    <img src="./static/img/navbar4.png" alt="logo" class="logo">
 
     <nav>
       <ul>
         <li><a href="{{ url_for('showHomepage')}}">Home</a></li>
-        <li><a href="{{ url_for('showProjects')}}">PROJECTS</a></li>
-        <li><a href="{{ url_for('showResources')}}">RESOURCES</a></li>
-        <li><a href="{{ url_for('showContact')}}">CONTACT</a></li>
-        <li><a href="https://github.com/spencerbertsch1" target="_blank">GITHUB</a></li>
+        <li><a href="{{ url_for('showProjects')}}">RESEARCH</a></li>
+        <li><a href="{{ url_for('showResources')}}">TEACHING</a></li>
+        <li><a href="{{ url_for('showContact')}}">CV</a></li>
+        <li><a href="https://github.com/spencerbertsch1" target="_blank">MISC.</a></li>
       </ul>
     </nav>
   </div>
@@ -35,10 +35,31 @@
 
   <body>
     <div class="homepage">
+      <div class="homepage-left">
       <div class="image-box">
         <!-- https://user-images.githubusercontent.com/20422614/102021209-02879b00-3d33-11eb-99c4-9ef499e6fb6b.jpg -->
         <img src="https://user-images.githubusercontent.com/20422614/90533926-1fc2a900-e147-11ea-97eb-1158a4676646.jpg" alt="Headshot" style="width:320px;height:434px;">
       </div>
+
+      <div class="contact-text-box">
+        <div class="contact-title">
+          <h1> 
+            Get in touch! 
+          </h1>
+        </div>  
+          <div class="contact-icon">
+            <a href="https://www.linkedin.com/in/spencerbertsch/" target="_blank" style="color: #000000; text-decoration: none;"><i class="fa fa-linkedin" style="font-size:24px;color:#619bff"></i><span class="contact-txt"> Spencer Bertsch</span></a>
+          </div>
+  
+          <div class="contact-icon">
+            <a href="https://github.com/spencerbertsch1" target="_blank" style="color: #000000; text-decoration: none;"><i class="fa fa-github" style="font-size:24px;color:#619bff"></i><span class="contact-txt" > spencerbertsch1</span></a>
+          </div>
+  
+          <div class="contact-icon">
+            <a href="mailto:sbertsch.dev@gmail.com" target="_blank" style="color: #000000; text-decoration: none;"><i class="fa fa-envelope-o" style="font-size:24px;color:#619bff"></i><span class="contact-txt" > sbertsch.dev@gmail.com</span></a>
+          </div>  
+      </div>
+    </div>
 
       <div class="text-box">
         <h1>
@@ -57,10 +78,7 @@
           into researching and developing statistical machine learning solutions in Python. Feel free to explore my projects and resources to see what else I’ve been
           working on and thinking about lately.
           <br><br>
-          <em>
-            Note: All of my thoughts and projects found on this website are entirely my own
-            and do not reflect upon my employer or any past employer.
-          </em>
+            See my most recent publication: XXX YYY
         </p>
 
         <div class="aws-img">
@@ -75,10 +93,10 @@
         <br>
         <hr>
         <br>
-        <a href="https://www.linkedin.com/in/spencerbertsch/" target="_blank"><i class="fa fa-linkedin" style="font-size:24px;color:#2962FF"></i></a>
-        &emsp; <a href="https://github.com/spencerbertsch1" target="_blank"><i class="fa fa-github" style="font-size:24px;color:#2962FF"></i></a>
+        <a href="https://www.linkedin.com/in/spencerbertsch/" target="_blank"><i class="fa fa-linkedin" style="font-size:24px;color:#000000"></i></a>
+        &emsp; <a href="https://github.com/spencerbertsch1" target="_blank"><i class="fa fa-github" style="font-size:24px;color:#000000"></i></a>
         
-        <p class="light-text" style="color:gray"> Spencer Bertsch &copy; 2020 </p>
+        <p class="light-text" style="color:gray"> Spencer Bertsch &copy; 2021 </p>
     </footer>
     </div>
   </body>
