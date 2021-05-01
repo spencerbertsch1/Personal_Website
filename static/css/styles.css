@@ -125,7 +125,7 @@ nav a:hover::before {
   /* margin-top: 40px; */
   padding: 16px;
   width: 465px;
-  height: 648px;
+  height: 658px;
 
   word-wrap: break-word;
 }
@@ -152,15 +152,15 @@ nav a:hover::before {
 
   padding: 20px;
   width: 309px;
-  height: 165px;
+  height: 175px;
   margin-top: 10px;
 
   word-wrap: break-word;
 }
 
-.contact-title h1{
-  margin-top: 2px;
-  margin-bottom: 2px;
+.contact-title h2{
+  margin-top: 0px;
+  margin-bottom: 0px;
 }
 
 .sentiment_dash_box{
